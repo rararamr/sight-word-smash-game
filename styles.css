@@ -1,29 +1,40 @@
 body {
-    font-family: sans-serif;
-    margin: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  #game-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px auto;
-  }
-  
-  .word-box {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .word-box:hover {
-    background-color: #eee;
-  }
-  
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+#game-container {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px; /* Set a fixed width for the container */
+}
+
+.word-box {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  /* Adjust width to fit 10 words comfortably */
+  width: calc(100% / 5);
+}
+
+.word-box span {
+  margin-right: 5px;  /* Reduce spacing between words for more words */
+}
+
+.word-box:hover {
+  background-color: #eee;
+}
