@@ -69,9 +69,11 @@ function handleWordClick(event) {
 
     if (lives === 0) {
       alert("Game Over! Score: " + score);
-      const restartButton = document.getElementById("restart-button");
-      restartButton.style.display = "block"; // Make the button visible
-      // You can disable clicking on word boxes here or add a restart button
+      //const restartButton = document.getElementById("restart-button");
+      //restartButton.style.display = "block"; // Make the button visible
+      setTimeout(function() {
+        restartGame();
+      }, 1000); // Restart after 2 seconds (adjust as needed)
     }
   }
 
@@ -82,8 +84,8 @@ displayWord();
 
 wordBoxes.forEach(box => box.addEventListener("click", handleWordClick));
 
-const restartButton = document.getElementById("restart-button");
-restartButton.addEventListener("click", restartGame);
+//const restartButton = document.getElementById("restart-button");
+//restartButton.addEventListener("click", restartGame);
 
 const goBackButton = document.getElementById("goBackButton");
 
